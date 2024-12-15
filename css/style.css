@@ -276,7 +276,7 @@ p {
         justify-content: space-around;
         color: var(--putih);
         text-decoration: none;
-        margin-bottom: 3px;
+        margin-bottom: 5px;
     }
 
     .detail-courses .courses-box {
