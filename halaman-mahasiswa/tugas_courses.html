@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://fontawesome.com/icons/link-simple?f=classic&s=solid">
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/jquery.js"></script>
+</head>
+
+<body>
+    <section id="container">
+        <div class="profil">
+            <img src="../img/profil/ahmad.jpg" alt="" class="foto-pp">
+            <div class="username">
+                <h5>Hello 👋</h5>
+                <h3>Ahmad</h3>
+            </div>
+            <div class="menu-profil" style="display: none;">
+                <a href="profil.html" class="menu-main">
+                    <i class="fa-solid fa-user"></i>
+                    <p class="menu">Profil</p>
+                </a>
+                <a href="about_app.html" class="menu-main">
+                    <i class="fa-solid fa-circle-info"></i>
+                    <p class="menu">About App</p>
+                </a>
+                <div class="baris-menu menu"></div>
+                <a href="../index.html" class="menu-main menu-logout">
+                    <i class="fa fa-sign-out" aria-hidden="true"></i>
+                    <p class="menu">Logout</p>
+                </a>
+            </div>
+            <a href="detail_courses.html" class="btn-pp-kembali"><img src="../img/Arrow left-circle.png" alt=""></a>
+        </div>
+        <div class="con-main-content">
+            <div class="con-btn-kembali">
+                <a href="detail_courses.html" class="btn-pp-kembali dua"><img src="../img/Arrow left-circle.png"
+                        alt=""></a>
+            </div>
+
+            <div class="det-courses-con">
+                <div class="det-courses-title">
+                    <h2>Desain Web</h2>
+                </div>
+                <div class="det-courses-box">
+                    <div class="det-dosen">
+                        <h4>Desain Web</h4>
+                        <p>Pak Rodri</p>
+                    </div>
+                    <p>J.II.04 08.00-10.30</p>
+                </div>
+            </div>
+            <div class="tugas-det">
+                <h2>Tugas 1</h2>
+                <h5>Deskripsi tugas</h5>
+                <div class="deskripsi-tugas">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet temporibus, animi sunt harum
+                        minus neque aliquid. Distinctio nostrum libero pariatur fuga magnam corporis, eligendi
+                        consectetur quos exercitationem quibusdam laudantium aperiam possimus ducimus asperiores, animi,
+                        ratione nihil alias. Dicta nulla ullam autem quia ea distinctio impedit inventore maxime.</p>
+                </div>
+                <div class="pengumpulan-tugas">
+                    <img src="../img/file.svg" alt="">
+                    <table>
+                        <tr>
+                            <td>Status</td>
+                            <td>Belum mengumpulkan</td>
+                        </tr>
+                        <tr>
+                            <td>Due Date</td>
+                            <td>Friday, 4 October 2024 11.59 PM</td>
+                        </tr>
+                        <tr>
+                            <td>File Submissions</td>
+                            <td>-</td>
+                        </tr>
+                    </table>
+                    <button class="button-input">
+                        Add Submission
+                    </button>
+                </div>
+            </div>
+            <div class="kotak-input-tugas" style="display: none;">
+                <img src="../img/silang.svg" alt="" class="silang">
+                <div class="area-input">
+                    <img src="../img/input.svg" alt="">
+                    <h3>Drag your file here</h3>
+                </div>
+                <h4>or</h4>
+                <label class="btn-browser" for="fileInput">Browser</label>
+                <div class="detail-file-upload">
+
+                    <div class="line-batas"></div>
+                </div>
+                <button type="submit" class="btn-upload-file">Upload File</button>
+                <input type="file" id="fileInput" style="display: none;">
+            </div>
+
+        </div>
+
+
+    </section>
+
+</body>
+
+</html>
