@@ -1,0 +1,1406 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* mulai koding ku */
+
+@font-face {
+    font-family: 'InterBold';
+    src: url('fonts/Inter/static/Inter_18pt-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+  
+html {
+    scroll-behavior: smooth;
+}
+
+/* global style */
+
+h1 {
+    font-size: 20px;
+    font-weight: bold;
+    
+  }
+h2 {
+    font-size: 19px;
+    font-weight: bold;
+  }
+
+h3{
+    font-size: 16px;
+    font-weight: bold;
+  }
+h4{
+    font-size: 15px;
+    font-weight: bold;
+  }
+
+h5 {
+    font-size: 14px;
+    /* font-weight: bold; */
+    
+  }
+  
+p {
+    font-size: 11px;
+    font-weight: normal;
+    line-height: 16px;
+}
+
+:root {
+    --abu-tua: #686868;
+    --abu-sedikit-tua: #999999;
+    --abu-agak-muda: #9D9D9D;
+    --abu-muda: #D9D9D9;
+    --abu-muda-sekali: #ebebeb;
+    --biru-utama: #0385FF;
+    --biru-tua: #0069cc;
+    --putih: #ffffff;
+    --orange: #F9BE2C;
+    
+}
+
+
+/* @media screen and (max-width: 1024px) { */
+    
+    /* dashboard - maha */
+    #container {
+        width: 100%;
+        /* background-color: salmon; */
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        font-family: 'InterBold', sans-serif;
+    }
+
+    .profil {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        color: var(--abu-tua);
+        /* background-color: salmon; */
+        margin-bottom: 30px;
+        position: relative;
+    }
+
+    .profil .foto-pp {
+        width: 63px;
+        border-radius: 15px;
+        margin-right: 15px;
+        cursor: pointer;
+    }
+
+    .profil .menu-profil {
+        background-color: var(--putih);
+        position: absolute;
+        top: 100%;
+        border-radius: 15px;
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.116);
+        display: flex;
+        flex-direction: column;
+        padding: 10px 20px;
+        overflow: hidden;
+        z-index: 10;
+    }
+
+    .profil .menu-profil .menu-main {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: var(--abu-sedikit-tua);
+        height: 45px;
+    }
+
+    .profil .menu-profil .baris-menu {
+        margin-top: 15px;
+        width: 100%;
+        height: 1px;
+        background-color: var(--abu-muda);
+    }
+
+    .profil .menu-profil .menu-main i {
+        font-size: 13px;
+        width: 22px;
+    }
+
+    .profil .menu-profil .menu {
+        font-size: 12px;
+        font-weight: 600;
+    }
+
+    .profil .menu-profil .menu i {
+        margin-right: 3px;
+    }
+
+    .profil .menu-profil .menu-main:hover{
+        color: var(--biru-utama);
+    }
+
+    /* .profil .btn-pp-kembali {
+        position: fixed;
+        right: 30px;
+        
+    } */
+    .profil .btn-pp-kembali {
+        position: absolute;
+        right: 0;
+        
+    }
+
+    .profil .btn-pp-kembali img {
+        margin: 0;
+        width: 32px;
+    }
+
+    /* khusu profi full diskusi */
+    .profil.full-diskusi-pp {
+        display: none;
+    }
+
+    .con-main-content {
+        position: relative;
+    }
+
+    .con-main-content .con-btn-kembali {
+        display: none;
+    }
+
+    
+    
+
+    .username h5 {
+        margin-bottom: 3px;
+    }
+    .news {
+        background-color: var(--biru-utama);
+        border-radius: 15px;
+        padding: 25px;
+        color: var(--putih);
+        display: none;
+    }
+
+    .news.active {
+        display: block; /* Berita aktif akan terlihat */
+      }
+
+    .news h3 {
+        margin-bottom: 5px;
+    }
+
+    .news-1 {
+        background-color: var(--biru-utama);
+    }
+    .news-2 {
+        background-color: var(--orange);
+    }
+
+    .news-3 {
+        background-color: var(--abu-agak-muda);
+    }
+
+    .dot-slide {
+        display: flex;
+        gap: 4px;
+        justify-content: center;
+        margin: 8px 0;
+    }
+
+    .dot {
+        background-color: var(--abu-muda);
+        width: 10px;
+        height: 10px;
+        border-radius: 50px;
+        cursor: pointer;
+    }
+
+    .dot.active {
+        background-color: var(--abu-sedikit-tua);
+
+    }
+
+    .courses-con {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .tugas-con {
+        margin-top: 12px;
+    }
+
+    .courses-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        margin-bottom: 8px;
+        color: var(--abu-tua);
+    }
+
+
+    .courses-title a {
+        text-decoration: none;
+        font-size: 12px;
+        color: var(--abu-sedikit-tua);
+    }
+
+    .courses-title.courses-plus-circle {
+        gap: 8px;
+        justify-content: flex-start;
+        align-items: center;
+        
+    }
+
+    .courses-title.courses-plus-circle .plus-circle {
+        display: flex;
+        width: 20px;
+        height: 20px;
+    }
+
+    
+
+    .courses-all-box {
+        width: 100%;
+        display: flex;
+        padding-bottom: 3px;
+        overflow-x: scroll;       
+        scrollbar-color: var(--abu-muda) #ff000000;
+        scrollbar-width: thin;
+        scroll-margin-block-start: 5px;
+        /* padding: 20px; */
+    }
+
+
+    .courses-box {
+        flex: 0 0 140px;
+        height: 143px;
+        background-color: var(--orange);
+        border-radius: 15px;
+        margin-right: 12px;
+        padding: 18px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        color: var(--putih);
+        text-decoration: none;
+        margin-bottom: 5px;
+        cursor: pointer;
+        /* transition: all 0.3s ease-in-out; */
+        box-sizing: border-box;
+        position: relative;
+
+    }
+
+    /* .courses-box:hover {
+        transform: scale(1.02);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.096); 
+        transition: all 0.3s ease-in-out;
+    } */
+
+    /* .courses-box::after{
+        content: '';
+        position: absolute; 
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0; 
+        background-color: rgba(0, 0, 0, 0.253); 
+        border-radius: 15px; 
+        transition: background-color 0.3s ease-in-out; 
+    } */
+
+
+    .detail-courses .courses-box {
+        justify-content: center;
+    }
+
+    .detail-courses .courses-box i {
+        margin-top: 15px;
+    }
+
+    .courses-box:nth-child(even) {
+        background-color: var(--biru-utama);
+    }
+
+    .courses-box i {
+        font-size: 16px;
+        text-align: end;
+    }
+
+
+    .courses-box.btn-update-pertemuan {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    
+
+    .courses-box.btn-update-pertemuan img {
+        display: flex;
+        align-self: flex-end;
+        width: 13px;
+    }
+
+    /* progress */
+    .progress-con {
+        margin-top: 12px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .progress-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        margin-bottom: 8px;
+        color: var(--abu-tua);
+    }
+
+    .progress-title a {
+        text-decoration: none;
+        font-size: 12px;
+        color: var(--abu-sedikit-tua);
+    }
+
+    .progress-all-box {
+        width: 100%;
+        display: flex;
+        padding-bottom: 3px;
+        overflow-x: scroll;       
+        scrollbar-color: var(--abu-muda) #ff000000;
+        scrollbar-width: thin;
+    }
+
+    .progress-all-box-user {
+        margin-bottom: 5px;
+    }
+
+    /* view all courses */
+    .view-courses-con {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .view-courses-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        margin-bottom: 8px;
+        color: var(--abu-tua);
+    }
+
+    .view-courses-all-box {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .view-courses-box {
+        height: 63px;
+        background-color: var(--orange);
+        border-radius: 15px;
+        margin-bottom: 12px;
+        padding: 18px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: var(--putih);
+        text-decoration: none;
+        position: relative;
+        transition: all 0.3s ease-in-out;
+
+    }
+
+    .view-courses-box:hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.096); 
+    }
+
+    .view-courses-box:nth-child(even) {
+        background-color: var(--biru-utama);
+    }
+
+    .view-courses-box i {
+        font-size: 17px;
+        position: absolute;
+        right: 18px;
+    }
+    /* detail_courses */
+    .det-courses-box {
+        height: 63px;
+        background-color: var(--orange);
+        border-radius: 15px;
+        margin-bottom: 12px;
+        padding: 12px 18px;
+        color: var(--putih);
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+
+    }
+
+    .det-courses-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        margin-bottom: 8px;
+        color: var(--abu-tua);
+    }
+    .det-dosen {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    /* pertemuan courses */
+
+
+   
+
+   
+
+    .pertemuan-courses {
+        margin-top: 10px;
+        /* background-color: salmon; */
+        
+    }
+
+    .pertemuan-courses .line {
+        width: 100%;
+        height: 2px;
+        background-color: var(--abu-muda);
+        margin-bottom: 10px;
+        border-radius: 10px;
+    }
+    .pertemuan-courses h2 {
+        color: var(--biru-utama);
+    }
+
+    .pertemuan-courses .title-pertemuan-update {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .pertemuan-courses .btn-update-blue img {
+        margin: 0;
+        width: 18px;
+
+    }
+
+    .pertemuan-courses img {
+        width: 100%;
+        margin: 10px 0;
+    }
+    .pertemuan-courses .deskripsi {
+        padding-right: 20px;
+        position: relative;
+    }
+
+    .pertemuan-courses .deskripsi img {
+        color: var(--abu-tua);
+        position: absolute;
+        right: 0;
+        top: 4px;
+        width: 12px;
+        margin: 0;
+    }
+
+    .pertemuan-courses .deskripsi p {
+        color: var(--abu-tua);
+    }
+    
+
+    .pertemuan-courses .fitur-courses {
+        margin-top: 15px;
+        font-size: 11px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .pertemuan-courses .fitur-courses .fitur {
+        display: flex;
+        align-items: center;
+        
+    }
+
+    .pertemuan-courses .fitur-courses .fitur .icon {
+        width: 30px;
+    }
+
+    .pertemuan-courses .fitur-courses .fitur img {
+        width: 17px;
+        margin: 0;
+    }
+
+    .pertemuan-courses .fitur-courses .fitur a {
+        color: var(--biru-utama);
+    }
+
+    /* forum diskusi */
+ 
+
+
+    .pertemuan-diskusi h4 {
+        margin-top: 7px;
+        color: var(--abu-tua);
+        font-size: 13px;
+    }
+
+    .diskusi-chat {
+        /* background-color: salmon; */
+        margin-top: 10px;
+        position: relative;
+        border-radius: 12px;
+        border: 1px solid var(--abu-tua);
+        padding: 20px 0 30px 12px;
+    }
+
+    .diskusi-chat .chat-main {
+        /* background-color: rgb(114, 134, 250); */
+        width: 100%;
+        max-height: 290px;
+        overflow-y: scroll;
+        scrollbar-color: var(--abu-muda) #ff000000;
+        scrollbar-width: thin;
+        color: var(--putih);
+        display: flex;
+        flex-direction: column;
+        position: relative;
+
+    }
+
+    .diskusi-chat .chat-main .chat-left {
+        width: max-content;
+        max-width: 80%;
+        background-color: var(--biru-utama);
+        border-radius: 15px 15px 15px 0;
+        margin-bottom: 13px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-size: 11px;
+        position: relative;
+    }
+
+    .diskusi-chat .chat-main .chat-left .username-chat {
+        position: absolute;
+        top: -8px;
+        font-weight: 600;
+        color: var(--abu-tua);
+        font-size: 7px;
+        left: 10px;
+    }
+
+
+    
+    .diskusi-chat .chat-main .chat-right {
+        width: max-content;
+        max-width: 80%;
+        background-color: var(--orange);
+        border-radius: 15px 15px 0 15px;
+        margin-bottom: 13px;
+        margin-right: 4px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-size: 11px;
+        position: relative;
+        align-self: flex-end;
+    }
+
+    .diskusi-chat .chat-main .chat-right .username-chat {
+        position: absolute;
+        top: -8px;
+        right: 10px;
+        font-weight: 600;
+        color: var(--abu-tua);
+        font-size: 7px;
+    }
+
+    .diskusi-chat .kolom-inp {
+        background-color: rgb(255, 255, 255);
+        position: absolute;
+        width: 100%;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        left: 0;
+        bottom: 0;
+        border-radius: 0 0 15px 15px;
+        padding: 12px;
+    }
+
+    .diskusi-chat .kolom-inp .kolom-inp-chat {
+        background-color: var(--abu-muda);
+        width: 100%;
+        /* position: relative; */
+        height: 28px;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+    }
+    .diskusi-chat .kolom-inp .kolom-inp-chat .inp-chat-diskusi {
+        width: 100%;
+        height: 28px;
+        outline: none;
+        border: none;
+        background-color: transparent;
+        border-radius: 12px;
+        padding: 0 12px;
+        font-size: 11px;
+        color: var(--abu-tua);
+    }
+
+    .diskusi-chat .kolom-inp .kolom-inp-chat button {
+        right: 0;
+        height: 28px;
+        border-radius: 12px;
+        padding: 0 15px;
+        color: var(--putih);
+        border: none;
+        outline: none;
+        background-color: var(--biru-utama);
+        cursor: pointer;
+    }
+    .diskusi-chat .kolom-inp .kolom-inp-chat button:hover{
+        background-color: #399fff;
+
+    }
+
+    .diskusi-chat .maximaze-diskusi {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+    }
+
+    .diskusi-chat .maximaze-diskusi img {
+        width: 13px;
+        margin: 0;
+    }
+
+
+
+    /* full forum diskusi */
+
+    #container.con-forum-diskusi-khusus {
+        padding-bottom: 0;
+    }
+
+
+    .full-forum-diskusi{
+        color: var(--abu-tua);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+    }
+
+    .full-forum-diskusi h2 {
+        margin-bottom: 5px;
+    }
+
+    .full-forum-diskusi .minimaze-diskusi {
+        width: 20px;
+    }
+
+    .line-diskusi {
+        height: 2px;
+        width: 100%;
+        background-color: var(--abu-muda);
+        margin: 10px 0 5px 0;
+        border-radius: 15px;
+
+    }
+
+    
+
+    .full-diskusi-chat {
+        border: none;
+        margin-top: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        position: relative;
+        /* background-color: salmon; */
+    }
+
+    .full-diskusi-chat .chat-main {
+        max-height: 500px;
+        padding-bottom: 0;
+    }
+
+    .full-diskusi-chat .kolom-inp {
+        /* position: absolute; */
+        position: sticky;
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+        /* padding: 0 30px; */
+        border-radius: 0;
+        background-color: var(--putih);      
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        height: 55px;
+        /* background-color: salmon; */
+        /* display: none; */
+
+
+    }
+
+    .full-diskusi-chat .line-inp-chat{
+        height: 2px;
+        width: 100%;
+        background-color: var(--abu-muda);
+        border-radius: 15px;
+        position: absolute;
+        bottom: 46px;
+
+    }
+
+    .full-diskusi-chat .kolom-inp .kolom-inp-chat {
+        margin-top: 3px;
+    }
+
+
+    /* halaman tugas */
+    .tugas-det {
+        color: var(--abu-tua);
+    }
+
+    .tugas-det h2 {
+        margin-bottom: 13px;
+    }
+
+    .tugas-det h5 {
+        margin-left: 15px;
+        font-size: 11px;
+        margin-bottom: 3px;
+    }
+
+    .tugas-det .deskripsi-tugas {
+        background-color: var(--abu-muda);
+        padding: 15px;
+        border-radius: 15px;
+    }
+
+    .tugas-det .edit-tugas {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+    }
+    .tugas-det .edit-tugas .btn-ubah-tugas {
+        margin: 0;
+        padding: 0;
+    }
+
+    .pengumpulan-tugas {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pengumpulan-tugas img {
+        margin: 10px 0;
+        width: 40px;
+    }
+
+    .pengumpulan-tugas table {
+        font-size: 11px;
+    }
+    .pengumpulan-tugas table td {
+        padding: 5px;
+    }
+
+    .pengumpulan-tugas .button-input {
+        color: var(--abu-tua);
+        background-color: var(--abu-muda);
+        margin-top: 12px;
+        font-size: 11px;
+        padding: 8px;
+        cursor: pointer;
+        outline: none;
+        border: none;
+
+    }
+
+    .kotak-input-tugas {
+        position: absolute;
+        background-color: var(--putih);
+        align-self: center;
+        width: 100%;
+        max-width: 350px;
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.281);
+        border-radius: 15px;
+        padding: 15px;
+        padding-top: 35px;
+        font-size: 11px;
+        color: var(--abu-tua);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+
+    .kotak-input-tugas .silang {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 10px;
+        cursor: pointer;
+
+    }
+
+    .kotak-input-tugas .area-input {
+        max-width: 350px;
+        width: 100%;
+        border: 1px dotted var(--abu-tua);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .kotak-input-tugas .area-input img {
+        width: 27px;
+        margin-bottom: 20px;
+    }
+    .kotak-input-tugas .area-input h3 {
+        font-size: 14px;
+    }
+    .kotak-input-tugas h4 {
+        font-size: 14px;
+        margin: 15px 0;
+        color: var(--abu-sedikit-tua);
+    }
+
+    .kotak-input-tugas .btn-browser {
+        outline: none;
+        border: none;
+        background-color: var(--biru-utama);
+        padding: 10px 25px;
+        color: var(--putih);
+        border-radius: 15px;
+        margin-bottom: 30px;
+        cursor: pointer;
+    }
+
+    .detail-file-upload {
+        width: 100%;
+        
+    }
+
+    .single-file {
+        /* background-color: salmon; */
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .file-pilih {
+        width: 85%;
+        /* background-color: salmon; */
+        display: flex;
+        flex-direction: column;
+    }
+
+    .file-pilih h5 {
+        font-size: 12px;
+        margin-bottom: 5px;
+    }
+
+    .file-pilih .loading {
+        width: 100%;
+        height: 3px;
+        border-radius: 20px;
+        background-color: var(--abu-muda);
+        position: relative;
+        margin-bottom: 5px;
+    }
+
+    .file-pilih .loading .proses {
+        width: 20%;
+        height: 3px;
+        border-radius: 20px;
+        background-color: var(--abu-sedikit-tua);
+        position: absolute;
+    }
+
+    .detail-uk {
+        display: flex;
+        justify-content: space-between;
+        font-size: 9px;
+    }
+
+    .single-file .btn-pause {
+        width: 15%;
+        display: flex;
+        gap: 4px;
+        justify-content: end;
+        /* background-color: salmon; */
+
+    }
+
+    .detail-file-upload .line-batas {
+        width: 100%;
+        height: 1px;
+        background-color: var(--abu-muda);
+        margin: 25px 0;
+    }
+
+
+    .kotak-input-tugas .btn-upload-file {
+        width: 100%;
+        outline: none;
+        border: none;
+        background-color: var(--biru-utama);
+        padding: 10px 25px;
+        color: var(--putih);
+        border-radius: 15px;
+        cursor: pointer;
+    }
+
+    .tugas-det.penilaian-tugas-mhs {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .tugas-det.penilaian-tugas-mhs table {
+        padding: 0;
+        margin: auto;
+        font-size: 12px;
+        margin-top: 25px;
+    }
+
+    .tugas-det.penilaian-tugas-mhs table td {
+        background-color: var(--abu-muda);
+        height: 25px;
+        text-align: start;
+        padding: 3px 10px;
+        vertical-align: middle;
+    }
+
+    .tugas-det.penilaian-tugas-mhs table tr:nth-child(even) td{
+        background-color: var(--putih);
+    }
+    .tugas-det.penilaian-tugas-mhs table td:nth-child(1){
+        width: 200px;
+    }
+    .tugas-det.penilaian-tugas-mhs table td:nth-child(2){
+        border-left: 1px solid var(--abu-sedikit-tua);
+        border-right: 1px solid var(--abu-sedikit-tua);
+        vertical-align: middle;
+        
+    }
+    .tugas-det.penilaian-tugas-mhs table td:nth-child(2) img {
+        height: 20px;
+        width: 20px;    
+    }
+    .tugas-det.penilaian-tugas-mhs table td:nth-child(3){
+        width: 200px;
+    }
+    .tugas-det.penilaian-tugas-mhs table td:nth-child(4){
+        background-color: var(--putih);
+    }
+
+    .button-upload-nilai {
+        margin: auto;
+        color: var(--abu-tua);
+        background-color: var(--abu-muda);
+        margin-top: 12px;
+        font-size: 11px;
+        padding: 8px;
+        cursor: pointer;
+        outline: none;
+        border: none;
+        text-decoration: none;
+        margin-top: 25px;
+    }
+
+    /* tambah pertemuan */
+
+    .tambah-pertemuan {
+        color: var(--abu-tua);
+        display: flex;
+        flex-direction: column;
+        /* background-color: salmon; */
+    }
+
+    .tambah-pertemuan h2 {
+        margin-bottom: 13px;
+    }
+
+    /* .tambah-pertemuan h5 {
+        margin-left: 15px;
+        font-size: 11px;
+        margin-bottom: 3px;
+    } */
+
+    .con-inp-tambah {
+        width: 100%;
+        max-width: 450px;
+        /* background-color: salmon; */
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .con-inp-tambah label {
+        width: 110px;
+        font-size: 12px;
+        /* background-color: skyblue; */
+    }
+
+    .con-inp-tambah textarea {
+        font-size: 12px;
+        font-family: 'InterBold', sans-serif;
+    }
+
+    .con-inp-tambah input[type="file"] {
+        font-size: 12px;
+        cursor: pointer;
+        padding: 5px;
+    }
+    .con-inp-tambah input[type="file"]:focus {
+        border: none; /* Warna border saat focus */
+        outline: none; /* Menghapus outline bawaan browser */
+    }
+
+    .con-inp-tambah input[type="file"]::-webkit-file-upload-button {
+        background-color: var(--putih);
+        outline: none;
+        border: none;
+        border-radius: 8px;
+        font-size: 12px;
+        color: var(--abu-sedikit-tua);
+        width: 100px;
+
+
+    }
+
+    .con-inp-tambah .inp-tambah {
+        font-size: 12px;
+        width: 100%;
+        border: none;
+        outline: none;
+        background-color: var(--abu-muda-sekali);
+        padding: 5px 10px;
+        border-radius: 10px;
+        color: var(--abu-tua);
+    }
+
+
+    .con-inp-tambah .inp-tambah:focus {
+        border: 1px solid var(--abu-tua); /* Warna border saat focus */
+        outline: none; /* Menghapus outline bawaan browser */
+        transition: all 0.3s ease-in-out; /* Transisi halus saat focus */
+    }
+
+    .btn-upload-pertemuan {
+        margin: auto;
+        color: var(--abu-tua);
+        background-color: var(--abu-muda);
+        margin-top: 12px;
+        font-size: 11px;
+        padding: 8px;
+        cursor: pointer;
+        outline: none;
+        border: none;
+        text-decoration: none;
+        margin-top: 25px;
+    }
+
+    
+
+
+    /* halaman login */
+    .con-login {
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        /* background-color: salmon; */
+        align-items: center;
+    }
+
+    .con-login-main  {
+        padding-top: 40px;
+        height: 100%;
+        max-width: 450px;
+        width: 450px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* background-color: #0385FF; */
+    }
+    .con-login-main .kampus-merdeka {
+        width: 90px;
+        align-self: flex-start;
+       
+    }
+
+    .con-login-main .judul-login{
+        text-align: center;
+        margin: 30px 0;
+    }
+
+    .con-login-main .judul-login h1 {
+        font-size: 32px;
+        color: var(--abu-tua);
+    }
+
+    .con-login-main .logo-umk {
+        width: 107px;
+        margin-bottom: 35px;
+    }
+
+    .con-login-inp {
+        /* background-color: salmon; */
+        display: flex;
+        flex-direction: column;
+    }
+
+    .con-login-inp .login-inp {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .con-login-inp .login-inp label {
+        color: var(--abu-tua);
+        font-size: 12px;
+        font-weight: 600;
+        margin-bottom: 3px;
+        margin-top: 3px;
+    }
+    .con-login-inp .login-inp input {
+        border: none;
+        outline: none;
+        background-color: var(--abu-muda-sekali);
+        width: 250px;
+        height: 31px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        padding: 0 20px;
+        color: var(--abu-agak-muda);
+        font-size: 12px;
+    }
+
+    .con-login-inp .login-inp input:focus {
+        border: 1px solid var(--biru-utama); /* Warna border saat focus */
+        box-shadow: 0 0 8px #0385ff50; /* Bayangan luar untuk efek glow */
+        outline: none; /* Menghapus outline bawaan browser */
+        transition: all 0.3s ease-in-out; /* Transisi halus saat focus */
+    }
+
+    /*support google chrome*/
+    .con-login-inp .login-inp input::-webkit-input-placeholder{
+        color: var(--abu-agak-muda);
+    }
+    
+    /*support mozilla*/
+    .con-login-inp .login-inp input:-moz-input-placeholder{
+        color: var(--abu-agak-muda);
+    }
+    
+    /*support internet explorer*/
+    .con-login-inp .login-inp input:-ms-input-placeholder{
+        color: var(--abu-agak-muda);
+    }
+
+    .btn-login {
+        border: none;
+        outline: none;
+        margin-top: 20px;
+        width: max-content;
+        align-self: center;
+        padding: 10px 30px;
+        background-color: var(--biru-utama);
+        font-weight: bold;
+        color: var(--putih);
+        border-radius: 10px;
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+    .btn-login:hover {
+        background-color: var(--biru-tua); /* Warna biru lebih gelap saat hover */
+        transform: scale(1.05); /* Sedikit perbesar ukuran */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.096); /* Tambahkan shadow */
+        transition: all 0.3s ease-in-out;
+    }
+
+    /* about-app-con */
+
+    .about-app-con {
+        color: var(--abu-tua);
+    }
+
+    .about-app-con h2 {
+        margin-bottom: 10px;
+    }
+
+    .about-app-con table td {
+        font-size: 11px;
+        line-height: 16px;
+        padding-right: 10px;
+    }
+
+    
+
+
+
+/* } */
+
+@media screen and (min-width: 950px) {
+    #container {
+        /* padding-top: 80px; */
+        padding-left: 240px;
+    }
+
+    .profil {
+        position: fixed;
+        background-color: var(--putih);
+        border-right: 1px solid var(--abu-sedikit-tua);
+        width: 210px;
+        display: flex;
+        align-items: center;
+        /* flex-direction: column; */
+        left: 0;
+        top: 0;
+        bottom: 0;
+        align-items: flex-start;
+        padding: 30px;
+        margin: 0;
+    }
+
+    .profil .username {
+        margin-top: 15px;
+    }
+
+    .profil .menu-profil {
+        top: 100px;
+        /* left: 0; */
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        width: 150px;
+        padding: 10px 0;
+        padding-left: 0;
+        box-shadow: none;
+        border-radius: 0;
+        background-color: none;
+        /* background-color: salmon; */
+        bottom: 20px;
+
+    }
+
+    
+
+    .profil .menu-profil .menu-logout {
+        position: absolute;
+        bottom: 0;
+    }
+
+    .profil .btn-pp-kembali {
+        display: none;
+        /* position: fixed;
+        right: 30px;
+        width: 100%; */
+        
+    }
+
+
+
+    .con-main-content .con-btn-kembali {
+        display: flex;
+        height: 63px;
+        width: 100%;
+        margin-bottom: 30px;
+        justify-content: end;
+        align-items: center;
+    }
+    .btn-pp-kembali.dua img {
+        margin: 0;
+        width: 32px;
+    }
+
+    .profil.full-diskusi-pp {
+        display: flex;
+    }
+
+    .con-login-main  {
+        padding: 20px;
+        height: max-content;
+        /* border: 1px solid var(--abu-sedikit-tua); */
+        background-color: var(--putih);
+        border-radius: 15px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.219);
+
+    }
+}
